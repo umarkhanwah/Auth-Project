@@ -67,6 +67,8 @@ export const handleLogin  = async (req, res)=>{
             else{
                 // Auth TOken ,
                 const token  = jwt.sign({id : validUser._id} , process.env.JWT_SecretCode);
+                console.log("JWT_SecretCode:", process.env.JWT_SecretCode);
+
                 // 'JWT_SecretCode' is a string variavle in .env ,
                 //  it is customized at developer's choice  
                 
