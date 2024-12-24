@@ -21,7 +21,7 @@ mongoose.connect(process.env.MONGO ).then(
 // Working for hosting
 app.use(express.static(path.join(__dirname , '/cleint/dist' , )))
 
-app.get("*" , (req , res)=>{
+app.get("/" , (req , res)=>{
     // res.sendFile(path.join(__dirname ,'cleint'  ,'dist' , 'index.html' ))
     res.send("Hellow")
 });
