@@ -22,7 +22,8 @@ mongoose.connect(process.env.MONGO ).then(
 app.use(express.static(path.join(__dirname , '/cleint/dist' , )))
 
 app.get("*" , (req , res)=>{
-    res.sendFile(path.join(__dirname ,'cleint'  ,'dist' , 'index.html' ))
+    // res.sendFile(path.join(__dirname ,'cleint'  ,'dist' , 'index.html' ))
+    res.send("Hellow")
 });
 
 
